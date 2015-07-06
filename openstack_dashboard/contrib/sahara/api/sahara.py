@@ -245,7 +245,7 @@ def cluster_create(request, name, plugin_name, hadoop_version,
                    cluster_template_id=None, default_image_id=None,
                    is_transient=None, description=None, cluster_configs=None,
                    node_groups=None, user_keypair_id=None,
-                   anti_affinity=None, net_id=None):
+                   anti_affinity=None, count=None, net_id=None):
     return client(request).clusters.create(
         name=name,
         plugin_name=plugin_name,
@@ -258,6 +258,7 @@ def cluster_create(request, name, plugin_name, hadoop_version,
         node_groups=node_groups,
         user_keypair_id=user_keypair_id,
         anti_affinity=anti_affinity,
+        count=count,
         net_id=net_id)
 
 
